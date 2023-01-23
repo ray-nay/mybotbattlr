@@ -1,13 +1,11 @@
-
-import '../App.css';
-import BotsPage from './BotsPage.js';
- 
+import React from "react";
+import BotsPage from "./BotsPage";
 
 function App() {
   return (
     <div className="App">
-        
-        <BotsPage/>
+      <h2>Hello World</h2>
+      <BotsPage />
     </div>
   );
 }
