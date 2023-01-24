@@ -9,6 +9,6 @@ const botTypeClasses = {
   Captain: "icon star",
 };
 
-function BotCard2(){
+function BotCard2({bot, botsArmy, setBotsArmy}){
     
 }
