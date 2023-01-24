@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate, Link } from "react-router-dom";
+import BotSpecs from "./BotSpecs";
 
 const botTypeClasses = {
   Assault: "icon military",
@@ -9,15 +11,50 @@ const botTypeClasses = {
   Captain: "icon star",
 };
 
-function BotCard({ bot }) {
+function BotCard({ bot, botsArmy, setBotsArmy, bots, setBots}) {
+
+  const navigate = useNavigate()
+
+  const botObj = {
+    id: bot.id,
+    name: bot.name,
+    health: bot.name,
+    damage: bot.damage,
+    armor: bot.armor,
+    bot_class: bot.bot_class,
+    catchphrase: bot.catchphrase,
+    avatar_url: bot.avatar_url,
+    created_at: bot.created_at,
+    updated_at: bot.updated_at
+  };
+ 
+  function handleBotClick(){
+
+    
+    let presentBots = botsArmy.some(botArmy=>{
+      return botArmy.id === botObj.id
+    })
+    //Making sure an already existing bot does not render to the favorites section.
+    
+  }
+
+  
+
+  function handleDivClick(){
+    <Link exact to= {`/${bot.id}`} />
+    console.log(bot)
+    return <BotSpecs bot={botObj}/>
+    
+  }
+
+  
   return (
-    <div className="ui column">
+    <div className="ui column" onClick={handleDivClick}>
       <div
         className="ui card"
         key={bot.id}
-        onClick={() => console.log("add code to connect event listener")}
       >
-        <div className="image">
+        <div className="image" onClick={handleBotClick}>
           <img alt="oh no!" src={bot.avatar_url} />
         </div>
         <div className="content">
@@ -47,9 +84,7 @@ function BotCard({ bot }) {
             <div className="ui center aligned segment basic">
               <button
                 className="ui mini red button"
-                onClick={() =>
-                  console.log("add code to connect event listener")
-                }
+                onClick={handleDelete}
               >
                 x
               </button>
