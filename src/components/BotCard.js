@@ -41,8 +41,21 @@ function BotCard({ bot, botsArmy, setBotsArmy, bots, setBots}) {
       alert ('Bot already exists')
     }
   }
+  //Function to permanently delete the bot.
+  function handleDelete (){
 
-  
+    if(window.confirm('Are you sure you want to delete the bot')){
+      fetch(`http://localhost:3000/bots/${bot.id}`, {method: 'DELETE'})
+      .then(res=>res.json())
+      .then(()=>{
+        const undeleteBots = bots.filter(botItem=>botItem.id !== bot.id)
+        const undeleteBotsArmy = botsArmy.filter(botItem=> botItem.id !== bot.id)
+        setBotsArmy(undeleteBotsArmy)
+        setBots(undeleteBots)
+      })
+    }
+    
+  }
 
   function handleDivClick(){
     <Link exact to= {`/${bot.id}`} />
