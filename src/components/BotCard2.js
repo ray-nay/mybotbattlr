@@ -11,4 +11,7 @@ const botTypeClasses = {
 
 function BotCard2({bot, botsArmy, setBotsArmy}){
     
+    function handleBotClick(){
+        
+    }
 }
