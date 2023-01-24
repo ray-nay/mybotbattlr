@@ -35,7 +35,11 @@ function BotCard({ bot, botsArmy, setBotsArmy, bots, setBots}) {
       return botArmy.id === botObj.id
     })
     //Making sure an already existing bot does not render to the favorites section.
-    
+    if (!presentBots){
+      setBotsArmy([...botsArmy, botObj])
+    }else{
+      alert ('Bot already exists')
+    }
   }
 
   
