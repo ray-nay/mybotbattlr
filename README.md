@@ -3,7 +3,11 @@ Bot Battlr
 ### Author : Name Date
 Catherine Renee Mumbi 24/01/2022
 ## Project Description
-This project is a website application that displays to the user a list of all the bots on the browser in form of cards. The project incorporates functionality that enables the user to add their favorite bots to the 'Your Bots Army collection. This is achieved by clicking on the bot you would like to add.  The user can also add or delete a bot by pressing on the (X) icon which will delete the bot permanently from the Bot collection as well as from the Your bot army section. This deletion will also persist to the database.
+This project is a website application that displays to the user a list of all the bots on the browser in form of cards.
+The project incorporates a functionality that enables the user to add their favorite bots to the 'Your Bots Army collection.
+This is achieved by clicking on the bot you would like to add.  
+The user can also add or delete a bot by pressing on the (X) icon which will delete the bot permanently from the Bot collection as well as from the Your bot army section. 
+This deletion will also persist to the database.
 
 ## Project SetUp 
  The project is set up in React files.
