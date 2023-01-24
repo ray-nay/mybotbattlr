@@ -12,7 +12,7 @@ const botTypeClasses = {
 function BotCard2({bot, botsArmy, setBotsArmy}){
     
     function handleBotClick(){
-
+        //Rendering the remaining bots after a bot has been deleted.
         const remainingBotsArmy = botsArmy.filter(botArmy => botArmy.id !== bot.id);
         setBotsArmy(remainingBotsArmy)
     }
