@@ -37,7 +37,7 @@ This is the section that displays the bots selected as your favorites.
 ![Search page](./Images/Yourbotsarmy.png)
 
 ## LIve site
-[Live link]()
+[Live link]("https://mybotbattlr.vercel.app/")
 
 ## Contact Information
 * catherine.mumbi@student.moringaschool.com
