@@ -12,6 +12,7 @@ const botTypeClasses = {
 function BotCard2({bot, botsArmy, setBotsArmy}){
     
     function handleBotClick(){
-        
+
+        const remainingBotsArmy = botsArmy.filter(botArmy => botArmy.id !== bot.id);
     }
 }
